@@ -1,15 +1,18 @@
 {
-    "id": "com.synvance.button-close-error",
-    "version": "0.0.1",
+    "id": "com.synvance.button.close.error",
+    "version": "0.1.2",
     "name": "Button Close Error Widget",
+    "description": "A button that checks HTML error when clicked",
     "newInstancePrefix": "ButtonCloseError",
     "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
-    "vendor": "Synvance",    
+    "vendor": "Synvance",
+    "eula": "EULA",
+    "license": "1.0",
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-button-close-error",
-            "url": "https://raw.githubusercontent.com/ren06/widget-error/main/buttonCloseError/buttonCloseError.js",
+            "tag": "com-synvance-imagebutton",
+            "url": "https://ren06.github.io/buttonCloseError/buttonCloseError.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
