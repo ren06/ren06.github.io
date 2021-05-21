@@ -63,7 +63,7 @@
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
                 console.log("selector changed, new value:", changedProperties["selector"]);
-                if(this.$selector !== "undefined"){
+                if(this.$selector !== "" && this.$selector !== undefined && this.$selector !== null){
                     const errorMessage = document.querySelector(this.$selector);
                     console.log(errorMessage);
                     if(errorMessage){
