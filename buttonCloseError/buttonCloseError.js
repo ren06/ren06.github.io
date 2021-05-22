@@ -61,7 +61,7 @@
                 var event = new Event("onClick");
                 
                 console.log("inside onClick");
-                checkErrorExists();
+                this.checkErrorExists();
 
                 //hardcoded
                 const message = document.querySelector("#__icon218");
@@ -94,7 +94,7 @@
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
                 console.log("selector changed, new value:", changedProperties["selector"]);
-                checkErrorExists();
+               this.checkErrorExists();
             }
 
             if ("errorExists" in changedProperties) {
