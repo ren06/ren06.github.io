@@ -1,4 +1,10 @@
 (function () {
+
+    const onClick = (e) => {
+        console.log('event clicked')
+
+    }
+
     let template = document.createElement("template");
     template.innerHTML = `
 		<style>
@@ -24,6 +30,22 @@
 	`;
 
     class Imagebutton extends HTMLElement {
+
+        checkErrorExists(){
+            console.log("checkErrorExists called");
+            if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
+                try{
+                    const errorMessage = document.querySelector(this.$selector);
+                    console.log(errorMessage);
+                    if(errorMessage){
+                        this.$errorExists = true;
+                    }
+                } catch(e){
+                    console.log("selector probably empty", e);
+                }
+            }
+        }
+
         constructor() {
             super();
             let shadowRoot = this.attachShadow({ mode: "open" });
@@ -36,6 +58,10 @@
 
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
+                
+                console.log("inside onClick");
+                checkErrorExists();
+
                 this.dispatchEvent(event);
             });
 
@@ -63,20 +89,11 @@
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
                 console.log("selector changed, new value:", changedProperties["selector"]);
-                if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
-                    try{
-                        const errorMessage = document.querySelector(this.$selector);
-                        console.log(errorMessage);
-                        if(errorMessage){
-                            this.$errorExists = true;
-                        }
-                    } catch(e){
-                        console.log("selector probably empty", e);
-                    }
-                }
+                checkErrorExists();
             }
 
             if ("errorExists" in changedProperties) {
+                console.log("errorExists changed, new value:", changedProperties["errorExists"]);
                 this.$errorExists = changedProperties["errorExists"];
             }
 

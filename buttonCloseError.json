@@ -1,6 +1,6 @@
 {
     "id": "com.synvance.button.close.error",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "name": "Button Close Error Widget",
     "description": "A button that checks HTML error when clicked",
     "newInstancePrefix": "ButtonCloseError",
@@ -12,7 +12,7 @@
         {
             "kind": "main",
             "tag": "com-synvance-imagebutton",
-            "url": "https://raw.githubusercontent.com/ren06/ren06.github.io/main/buttonCloseError/buttonCloseError.js",
+            "url": "https://ren06.github.io/buttonCloseError/buttonCloseError.js",
             "integrity": "",
             "ignoreIntegrity": true
         },
