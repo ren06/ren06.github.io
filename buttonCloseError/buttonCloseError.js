@@ -33,6 +33,7 @@
 
         checkErrorExists(){
             console.log("checkErrorExists called");
+            console.log("this.$selector is", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{
                     const errorMessage = document.querySelector(this.$selector);
