@@ -62,6 +62,10 @@
                 console.log("inside onClick");
                 checkErrorExists();
 
+                //hardcoded
+                const message = document.querySelector("#__icon218");
+                console.log("selector hardcoded", message);
+
                 this.dispatchEvent(event);
             });
 
