@@ -86,5 +86,5 @@
         }
     }
 
-    customElements.define("com-synvance-buttoncloseerrors", CloseErrorButton);
+    customElements.define("com-synvance-buttoncloseerror", CloseErrorButton);
 })();

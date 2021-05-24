@@ -11,7 +11,7 @@
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-synvance-checkerror",
+            "tag": "com-synvance-buttoncloseerror",
             "url": "https://ren06.github.io/buttonCloseError/buttonCloseError.js",
             "integrity": "",
             "ignoreIntegrity": true
