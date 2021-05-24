@@ -66,8 +66,8 @@
         render(tooltip) {
             //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
-            //this.$button.title = "'" + tooltip +"'";
-            this.$button.title = tooltip;
+            this.$button.title = "'" + tooltip +"'";
+            //this.$button.title = tooltip;
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
@@ -81,12 +81,12 @@
 
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
-                console.log("selector changed, new value:", changedProperties["selector"]);
-               this.checkErrorExists();
+                //console.log("selector changed, new value:", changedProperties["selector"]);
+                //this.checkErrorExists();
             }
 
             if ("errorExists" in changedProperties) {
-                console.log("errorExists changed, new value:", changedProperties["errorExists"]);
+                //console.log("errorExists changed, new value:", changedProperties["errorExists"]);
                 this.$errorExists = changedProperties["errorExists"];
             }
 
