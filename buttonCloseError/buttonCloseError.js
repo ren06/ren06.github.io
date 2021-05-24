@@ -48,7 +48,7 @@
                 var event = new Event("onClick");               
                 console.log("inside onClick");
                 //this.checkErrorExists();
-                this.dispatchEvent(event);
+                //this.dispatchEvent(event);
             });
 
             this.addEventListener("onmouseover", event => {
