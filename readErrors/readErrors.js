@@ -5,15 +5,17 @@
         <span id="readError" />
 	`;
 
+    let insertedNodes = [];
+
     class ReadError extends HTMLElement {
 
         checkErrorExists(){
             console.log("checkErrorExists called");
-            console.log("this.$selector is", this.$selector);
+            console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{
                     const errorMessage = document.querySelector(this.$selector);
-                    console.log(errorMessage);
+                    console.log("Current error message for " + this.$selector + ":", errorMessage);
                     if(errorMessage){
                         this.$errorExists = true;
                     }
@@ -25,12 +27,18 @@
 
         constructor() {
             super();
+            console.log('Inside constructor ReadError');
+
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content.cloneNode(true));
 
             this.$span = shadowRoot.querySelector('#readError');
 
-            console.log(this.$selector, this.$errorExists);
+            document.addEventListener("DOMNodeInserted", function(e) {                
+                console.log("DOM Node inserted:", e.target);
+                insertedNodes.push(e.target);
+            }, false);            
+
 
             this._props = {};
         }

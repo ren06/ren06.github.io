@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "name": "Read Errors",
     "description": "A div that check the value of HTML errors in SAC",
-    "newInstancePrefix": "ButtonCloseError",
+    "newInstancePrefix": "ReadErrors",
     "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
     "vendor": "Synvance",
     "eula": "EULA",
