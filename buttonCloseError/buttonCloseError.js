@@ -17,6 +17,7 @@
 
         checkErrorExists(){
             console.log("checkErrorExists called");
+            this.$selector = "#__message0";
             console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{                  
@@ -43,7 +44,7 @@
             this.$style = shadowRoot.querySelector('style');
             this.$button = shadowRoot.querySelector('#customCloseButton');
 
-            this.$selector = "#__message0";
+            
 
             this.addEventListener("click", event => {
                 var event = new Event("onClick");               
