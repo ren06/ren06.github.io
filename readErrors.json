@@ -46,5 +46,10 @@
             "description": "Return error status",           
             "body": "return this.errorExists;"
         }
+    },
+    "events": {
+        "onClick": {
+            "description": "Called when the user clicks widget."        
+        }
     }             
 }
