@@ -22,13 +22,14 @@
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{                  
                     const errorMessageDiv = document.querySelector(this.$selector);
-                    
-                    console.log("Current error message for " + this.$selector + ":", errorMessageDiv);
-                    if(errorMessage){
+                                        
+                    console.log("Current error message div for " + this.$selector + ":", errorMessageDiv);
+                    if(errorMessageDiv){
+                        const errorMessage = errorMessageDiv.innerText;
                         console.log("Setting this.$errorExists to true");
                         
                         this.onCustomWidgetAfterUpdate({errorExists: true});
-                        this.onCustomWidgetAfterUpdate({errorMessage: errorMessageDiv.innerText});
+                        this.onCustomWidgetAfterUpdate({errorMessage});
                         
                     }
                 } catch(e){
