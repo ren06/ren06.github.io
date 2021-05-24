@@ -23,13 +23,16 @@
 
         checkErrorExists(){
             console.log("checkErrorExists called");
-            console.log("this.$selector is", this.$selector);
+            console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{
                     const errorMessage = document.querySelector(this.$selector);
-                    console.log(errorMessage);
+                    console.log("Current error message for " + this.$selector + ":", errorMessage);
                     if(errorMessage){
-                        this.$errorExists = true;
+                        console.log("Setting this.$errorExists to true");
+                        
+                        this.onCustomWidgetAfterUpdate({errorExists: true});
+                        
                     }
                 } catch(e){
                     console.log("selector probably empty", e);
@@ -53,10 +56,6 @@
                 console.log("inside onClick");
                 this.checkErrorExists();
 
-                //hardcoded
-                const message = document.querySelector("#__message0");
-                console.log("selector hardcoded", message);
-
                 this.dispatchEvent(event);
             });
 
@@ -75,18 +74,19 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
+
+            console.log("onCustomWidgetAfterUpdate called");
+
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
             }
 
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
-                //console.log("selector changed, new value:", changedProperties["selector"]);
-                //this.checkErrorExists();
             }
 
             if ("errorExists" in changedProperties) {
-                //console.log("errorExists changed, new value:", changedProperties["errorExists"]);
+                console.log("errorExists changed, new value:", changedProperties["errorExists"]);
                 this.$errorExists = changedProperties["errorExists"];
             }
 
