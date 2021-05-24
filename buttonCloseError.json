@@ -1,6 +1,6 @@
 {
-    "id": "com.synvance.button.close.error",
-    "version": "0.1.7",
+    "id": "com.synvance.button.closeerror",
+    "version": "0.1.8",
     "name": "Button Close Error Widget",
     "description": "A button that checks HTML error when clicked",
     "newInstancePrefix": "ButtonCloseError",
