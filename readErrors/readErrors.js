@@ -34,12 +34,12 @@
 
             this.$span = shadowRoot.querySelector('#readError');
 
-            document.addEventListener("DOMNodeInserted", function(e) {
-                if(e.target.toString().startsWith('<label id="sap-fpa-ui-splash-view-message-label" data-sap-ui="sap-fpa-ui-splash-view-message-label" style="direction:inherit;text-align:left" class="logon-message-label sapUiLbl sapUiLblNowrap">')){
-                    console.log("DOM Node inserted:", e.target);
-                    insertedNodes.push(e.target);    
-                }
-            }, false);            
+            // document.addEventListener("DOMNodeInserted", function(e) {
+            //     if(e.target.toString().startsWith('<label id="sap-fpa-ui-splash-view-message-label" data-sap-ui="sap-fpa-ui-splash-view-message-label" style="direction:inherit;text-align:left" class="logon-message-label sapUiLbl sapUiLblNowrap">')){
+            //         console.log("DOM Node inserted:", e.target);
+            //         insertedNodes.push(e.target);    
+            //     }
+            // }, false);            
 
 
             this._props = {};
