@@ -23,7 +23,7 @@
                 try{                  
                     const errorMessageDiv = document.querySelector(this.$selector);
                                         
-                    console.log("Current error message div for " + this.$selector + ":", errorMessageDiv);
+                    //console.log("Current error message div for " + this.$selector + ":", errorMessageDiv);
                     if(errorMessageDiv){
                         const errorMessage = errorMessageDiv.innerText;
                         console.log("Setting this.$errorExists to true");
@@ -31,6 +31,9 @@
                         this.onCustomWidgetAfterUpdate({errorExists: true});
                         this.onCustomWidgetAfterUpdate({errorMessage});
                         
+                    }
+                    else{
+                        console.log("selector not found");
                     }
                 } catch(e){
                     console.log("selector probably empty", e);
@@ -46,7 +49,8 @@
             this.$style = shadowRoot.querySelector('style');
             this.$button = shadowRoot.querySelector('#customCloseButton');
             
-            this.addEventListener("click", event => {
+            this.addEventListener("click", e => {
+                console.log(e);
                 var event = new Event("onClick");               
                 console.log("inside onClick");
                 //this.checkErrorExists();
@@ -57,6 +61,7 @@
         }
 
         render(tooltip) {
+            console.log("render called");
             //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
             this.$button.title = "'" + tooltip +"'";
@@ -64,6 +69,7 @@
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
+            console.log("onCustomWidgetBeforeUpdate called");
             this._props = { ...this._props, ...changedProperties };
         }
 
