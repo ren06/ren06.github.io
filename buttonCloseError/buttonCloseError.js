@@ -50,7 +50,7 @@
             this.$button = shadowRoot.querySelector('#customCloseButton');
             
             this.addEventListener("click", e => {
-                console.log(e);
+                //console.log(e);
                 var event = new Event("onClick");               
                 console.log("Inside onClick");
                 this.checkErrorExists();
