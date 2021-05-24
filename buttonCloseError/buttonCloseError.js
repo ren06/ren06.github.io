@@ -17,7 +17,7 @@
 
         checkErrorExists(){
             console.log("checkErrorExists called");
-            this.$selector = "#__message0";
+            this.$selector = "#__message0 > div.sapEpmUiShellInfoMessageTitle > div.sapEpmUiShellInfoMessageContent.sapEpmUiShellInfoMessageCollapsed";
             console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{                  
@@ -71,6 +71,11 @@
 
             console.log("onCustomWidgetAfterUpdate called ");
             console.log(`${this._props["widgetName"]}`);
+
+            if ("errorMessage" in changedProperties) {
+                console.log("errorMessage changed, new value:", changedProperties["errorMessage"]);
+                this.$errorMessage = changedProperties["errorMessage"];
+            }
 
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
