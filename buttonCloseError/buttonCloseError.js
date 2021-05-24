@@ -18,7 +18,7 @@
         checkErrorExists(){
             console.log("checkErrorExists called");
             this.$selector = "#__message0 > div.sapEpmUiShellInfoMessageTitle > div.sapEpmUiShellInfoMessageContent.sapEpmUiShellInfoMessageCollapsed";
-            console.log("this.$selector=", this.$selector);
+            //console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{                  
                     const errorMessageDiv = document.querySelector(this.$selector);
@@ -26,9 +26,9 @@
                     //console.log("Current error message div for " + this.$selector + ":", errorMessageDiv);
                     if(errorMessageDiv){
                         const errorMessage = errorMessageDiv.innerText;
-                        console.log("Setting this.$errorExists to true");
+                        console.log("Setting this.$errorMessage to", errorMessage);
                         
-                        this.onCustomWidgetAfterUpdate({errorExists: true});
+                        //this.onCustomWidgetAfterUpdate({errorExists: true});
                         this.onCustomWidgetAfterUpdate({errorMessage});
                         
                     }
@@ -53,8 +53,8 @@
                 //console.log(e);
                 var event = new Event("onClick");               
                 console.log("Inside onClick");
-                //this.checkErrorExists(); 
-                this.onCustomWidgetAfterUpdate({tooltip: "TOTO_3"});
+                this.checkErrorExists(); 
+                //this.onCustomWidgetAfterUpdate({tooltip: "TOTO_3"});
                 this.dispatchEvent(event);
             });     
 
