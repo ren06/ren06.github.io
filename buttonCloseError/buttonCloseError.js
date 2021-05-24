@@ -81,7 +81,7 @@
 
         onCustomWidgetAfterUpdate(changedProperties) {
 
-            console.log("onCustomWidgetAfterUpdate called");
+            console.log("onCustomWidgetAfterUpdate called ");
             console.log(`${this._props["widgetName"]}`);
 
             if ("tooltip" in changedProperties) {
