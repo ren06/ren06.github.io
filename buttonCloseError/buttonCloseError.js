@@ -99,7 +99,7 @@
                 this.$errorExists = changedProperties["errorExists"];
             }
 
-            this.render(this.$tooltip);
+            this.render(this.$tooltip, this.$errorMessage);
         }
     }
 
