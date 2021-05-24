@@ -43,7 +43,7 @@
             this.$style = shadowRoot.querySelector('style');
             this.$button = shadowRoot.querySelector('#customCloseButton');
 
-            this.$selector = "#__message0";
+            this.selector = "#__message0";
 
             this.addEventListener("click", event => {
                 var event = new Event("onClick");               
