@@ -18,7 +18,9 @@
                     console.log("Current error message for " + this.$selector + ":", errorMessage);
                     if(errorMessage){
                         console.log("Setting this.$errorExists to true");
-                        this.$errorExists = true;
+                        
+                        onCustomWidgetAfterUpdate({errorExists: true});
+                        
                     }
                 } catch(e){
                     console.log("selector probably empty", e);
