@@ -1,6 +1,6 @@
 {
     "id": "com.synvance.button.close.error",
-    "version": "0.1.4",
+    "version": "0.1.6",
     "name": "Button Close Error Widget",
     "description": "A button that checks HTML error when clicked",
     "newInstancePrefix": "ButtonCloseError",
@@ -11,15 +11,8 @@
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-synvance-button-close-error",
+            "tag": "com-synvance-checkerror",
             "url": "https://ren06.github.io/buttonCloseError/buttonCloseError.js",
-            "integrity": "",
-            "ignoreIntegrity": true
-        },
-        {
-            "kind": "styling",
-            "tag": "com-synvance-imagebutton-sps",
-            "url": "https://aydenowl.github.io/literate-enigma/image_button/image_button_sps.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
