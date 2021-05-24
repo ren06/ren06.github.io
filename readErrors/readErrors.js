@@ -17,6 +17,7 @@
                     const errorMessage = document.querySelector(this.$selector);
                     console.log("Current error message for " + this.$selector + ":", errorMessage);
                     if(errorMessage){
+                        console.log("Setting this.$errorExists to true");
                         this.$errorExists = true;
                     }
                 } catch(e){
