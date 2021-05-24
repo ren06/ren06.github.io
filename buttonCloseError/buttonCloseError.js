@@ -61,11 +61,11 @@
             this._props = {};
         }
 
-        render(tooltip) {
+        render(tooltip, errorMessage) {
             //console.log("render called");
             //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
-            this.$button.title = "'" + tooltip +"'";
+            this.$button.title = "'" + errorMessage +"'";
             //this.$button.title = tooltip;
         }
 

@@ -56,6 +56,17 @@
             ],
             "body": "this.tooltip = newText;"
         },
+        "setErrorMessage": {
+            "description": "Sets the error message's text.",
+            "parameters": [
+                {
+                    "name": "newText",
+                    "type": "string",
+                    "description": "error's text"
+                }
+            ],
+            "body": "this.errorMessage = newText;"
+        },        
         "getTooltip": {
             "returnType": "string",
             "description": "Returns the tooltip's text.",
