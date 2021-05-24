@@ -53,7 +53,7 @@
                 //console.log(e);
                 var event = new Event("onClick");               
                 console.log("Inside onClick");
-                //this.checkErrorExists();
+                //this.checkErrorExists(); 
                 this.onCustomWidgetAfterUpdate({tooltip: "TOTO_3"});
                 this.dispatchEvent(event);
             });     
