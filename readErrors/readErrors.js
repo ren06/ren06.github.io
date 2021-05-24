@@ -19,7 +19,7 @@
                     if(errorMessage){
                         console.log("Setting this.$errorExists to true");
                         
-                        onCustomWidgetAfterUpdate({errorExists: true});
+                        this.onCustomWidgetAfterUpdate({errorExists: true});
                         
                     }
                 } catch(e){
@@ -56,6 +56,8 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
+
+            console.log("onCustomWidgetAfterUpdate called");
 
             if ("selector" in changedProperties) {
                 this.$selector = changedProperties["selector"];
