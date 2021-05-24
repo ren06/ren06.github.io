@@ -52,7 +52,7 @@
             this.addEventListener("click", e => {
                 console.log(e);
                 var event = new Event("onClick");               
-                console.log("inside onClick");
+                console.log("Inside onClick");
                 this.checkErrorExists();
                 this.dispatchEvent(event);
             });     
@@ -61,7 +61,7 @@
         }
 
         render(tooltip) {
-            console.log("render called");
+            //console.log("render called");
             //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
             this.$button.title = "'" + tooltip +"'";
@@ -69,14 +69,14 @@
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
-            console.log("onCustomWidgetBeforeUpdate called");
+            //console.log("onCustomWidgetBeforeUpdate called");
             this._props = { ...this._props, ...changedProperties };
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
 
             console.log("onCustomWidgetAfterUpdate called ");
-            console.log(`${this._props["widgetName"]}`);
+            console.log(`${this._props}`);
 
             if ("errorMessage" in changedProperties) {
                 console.log("errorMessage changed, new value:", changedProperties["errorMessage"]);
