@@ -53,7 +53,7 @@
                 console.log(e);
                 var event = new Event("onClick");               
                 console.log("inside onClick");
-                //this.checkErrorExists();
+                this.checkErrorExists();
                 this.dispatchEvent(event);
             });     
 
@@ -88,7 +88,7 @@
             }
 
             if ("selector" in changedProperties) {
-                this.checkErrorExists();
+                //this.checkErrorExists();
                 this.$selector = changedProperties["selector"];
             }
 
