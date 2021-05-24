@@ -37,7 +37,12 @@
             "type": "string",
             "description": "Error message in selector",
             "default": ""
-        }        
+        },
+        "$errorMessage": {
+            "type": "string",
+            "description": "Error message in $selector",
+            "default": ""
+        }         
     },  
     "methods": { 
         "setTooltip": {
@@ -76,7 +81,12 @@
             "returnType": "string",     
             "description": "Return error message",           
             "body": "return this.errorMessage;"
-        }
+        },
+        "getErrorMessage2": {      
+            "returnType": "string",     
+            "description": "Return error message",           
+            "body": "return this.$errorMessage;"
+        }        
     },
     "events": {
         "onClick": {

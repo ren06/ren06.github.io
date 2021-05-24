@@ -53,7 +53,8 @@
                 //console.log(e);
                 var event = new Event("onClick");               
                 console.log("Inside onClick");
-                this.checkErrorExists();
+                //this.checkErrorExists();
+                this.onCustomWidgetAfterUpdate({tooltip: "TOTO_3"});
                 this.dispatchEvent(event);
             });     
 
@@ -76,7 +77,7 @@
         onCustomWidgetAfterUpdate(changedProperties) {
 
             console.log("onCustomWidgetAfterUpdate called ");
-            console.log(`${this._props}`);
+            //console.log(`${this._props}`);
 
             if ("errorMessage" in changedProperties) {
                 console.log("errorMessage changed, new value:", changedProperties["errorMessage"]);
@@ -84,6 +85,7 @@
             }
 
             if ("tooltip" in changedProperties) {
+                console.log("tooltip changed, new value:", changedProperties["tooltip"]);
                 this.$tooltip = changedProperties["tooltip"];
             }
 
