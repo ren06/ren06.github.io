@@ -5,7 +5,7 @@
         <span id="readError" />
 	`;
 
-    class Imagebutton extends HTMLElement {
+    class ReadError extends HTMLElement {
 
         checkErrorExists(){
             console.log("checkErrorExists called");
@@ -28,7 +28,6 @@
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content.cloneNode(true));
 
-            this.$style = shadowRoot.querySelector('style');
             this.$span = shadowRoot.querySelector('#readError');
 
             console.log(this.$selector, this.$errorExists);
@@ -60,5 +59,5 @@
         }
     }
 
-    customElements.define("com-synvance-readerrors", Imagebutton);
+    customElements.define("com-synvance-readerrors", ReadError);
 })();
