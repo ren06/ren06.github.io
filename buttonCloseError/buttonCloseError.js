@@ -89,7 +89,7 @@
             }
 
             if ("selector" in changedProperties) {
-                checkErrorExists();
+                this.checkErrorExists();
                 this.$selector = changedProperties["selector"];
             }
 
