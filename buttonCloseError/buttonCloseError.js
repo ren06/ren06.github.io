@@ -48,22 +48,22 @@
                 var event = new Event("onClick");               
                 console.log("inside onClick");
                 //this.checkErrorExists();
-                //this.dispatchEvent(event);
-            });
-
-            this.addEventListener("onmouseover", event => {
-                var event = new Event("onMouseOver");               
-                console.log("inside onMouseOver");
-                this.checkErrorExists();
                 this.dispatchEvent(event);
             });
 
-            this.addEventListener("onmouseenter", event => {
-                var event = new Event("onMouseEnter");               
-                console.log("inside onMouseEnter");
-                this.checkErrorExists();
-                this.dispatchEvent(event);
-            });            
+            // this.addEventListener("onmouseover", event => {
+            //     var event = new Event("onMouseOver");               
+            //     console.log("inside onMouseOver");
+            //     this.checkErrorExists();
+            //     this.dispatchEvent(event);
+            // });
+
+            // this.addEventListener("onmouseenter", event => {
+            //     var event = new Event("onMouseEnter");               
+            //     console.log("inside onMouseEnter");
+            //     this.checkErrorExists();
+            //     this.dispatchEvent(event);
+            // });            
 
             this._props = {};
         }
@@ -89,6 +89,7 @@
             }
 
             if ("selector" in changedProperties) {
+                checkErrorExists();
                 this.$selector = changedProperties["selector"];
             }
 
