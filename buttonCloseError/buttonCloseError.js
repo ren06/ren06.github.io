@@ -14,7 +14,7 @@
 
 		</style>
 		
-        <button style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
+        <button id="customCloseButton" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
             Close
         </button>
 	`;
@@ -43,7 +43,7 @@
             shadowRoot.appendChild(template.content.cloneNode(true));
 
             this.$style = shadowRoot.querySelector('style');
-            this.$button = shadowRoot.querySelector('div');
+            this.$button = shadowRoot.querySelector('#customCloseButton');
 
             console.log(this.$selector, this.$errorExists);
 
@@ -66,7 +66,8 @@
         render(tooltip) {
             //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
             //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
-            this.$button.innerHTML = '<button title="' + tooltip + '" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">Close</button>';
+            //this.$button.title = "'" + tooltip +"'";
+            this.$button.title = tooltip;
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
