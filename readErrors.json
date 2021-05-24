@@ -1,6 +1,6 @@
 {
     "id": "com.synvance.readerrors",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "name": "Read Errors",
     "description": "A div that check the value of HTML errors in SAC",
     "newInstancePrefix": "ReadErrors",
