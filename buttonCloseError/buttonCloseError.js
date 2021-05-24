@@ -1,17 +1,11 @@
 (function () {
 
-    const onClick = (e) => {
-        console.log('event clicked')
-
-    }
-
     let template = document.createElement("template");
     template.innerHTML = `
 		<style>
 		:host {
 			display: block;
 		} 
-
 		</style>
 		
         <button id="customCloseButton" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
@@ -51,11 +45,9 @@
             console.log(this.$selector, this.$errorExists);
 
             this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                
+                var event = new Event("onClick");               
                 console.log("inside onClick");
                 this.checkErrorExists();
-
                 this.dispatchEvent(event);
             });
 
