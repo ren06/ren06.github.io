@@ -19,7 +19,7 @@
         </button>
 	`;
 
-    class Imagebutton extends HTMLElement {
+    class CloseErrorButton extends HTMLElement {
 
         checkErrorExists(){
             console.log("checkErrorExists called");
@@ -94,5 +94,5 @@
         }
     }
 
-    customElements.define("com-synvance-imagebutton", Imagebutton);
+    customElements.define("com-synvance-buttoncloseerrors", CloseErrorButton);
 })();

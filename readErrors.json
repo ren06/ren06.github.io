@@ -1,0 +1,50 @@
+{
+    "id": "com.synvance.readerrors",
+    "version": "0.1.0",
+    "name": "Read Errors",
+    "description": "A div that check the value of HTML errors in SAC",
+    "newInstancePrefix": "ButtonCloseError",
+    "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
+    "vendor": "Synvance",
+    "eula": "EULA",
+    "license": "1.0",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-synvance-readerrors",
+            "url": "https://ren06.github.io/readErrors/readErrors.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "selector": {
+            "type": "string",
+            "description": "Selector",
+            "default": ""
+        },
+        "errorExists": {
+            "type": "boolean",
+            "description": "True if error, false if none",
+            "default": false
+        }
+    },  
+    "methods": {        
+        "setQuerySelector": {           
+            "description": "Set selector",
+            "parameters": [
+                {
+                    "name": "sel",
+                    "type": "string",
+                    "description": "DOM Selector"
+                }
+            ],
+            "body": "this.selector = sel;"
+        },       
+        "isErrorExists": {      
+            "returnType": "boolean",     
+            "description": "Return error status",           
+            "body": "return this.errorExists;"
+        }
+    }             
+}
