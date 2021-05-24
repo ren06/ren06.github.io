@@ -34,9 +34,11 @@
 
             this.$span = shadowRoot.querySelector('#readError');
 
-            document.addEventListener("DOMNodeInserted", function(e) {                
-                console.log("DOM Node inserted:", e.target);
-                insertedNodes.push(e.target);
+            document.addEventListener("DOMNodeInserted", function(e) {
+                if(e.target.startsWith('<label id="sap-fpa-ui-splash-view-message-label" data-sap-ui="sap-fpa-ui-splash-view-message-label"')){
+                    console.log("DOM Node inserted:", e.target);
+                    insertedNodes.push(e.target);    
+                }
             }, false);            
 
 
