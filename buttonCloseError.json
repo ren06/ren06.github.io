@@ -71,6 +71,12 @@
     "events": {
         "onClick": {
             "description": "Called when the user clicks the button."        
-        }
+        },
+        "onMouseOver":{
+            "description": "Mouse over"        
+        }, 
+        "onMouseEnter":{
+            "description": "Mouse enter"        
+        }         
     }           
 }

@@ -43,15 +43,27 @@
 
             this.$style = shadowRoot.querySelector('style');
             this.$button = shadowRoot.querySelector('#customCloseButton');
-
             
-
             this.addEventListener("click", event => {
                 var event = new Event("onClick");               
                 console.log("inside onClick");
+                //this.checkErrorExists();
+                this.dispatchEvent(event);
+            });
+
+            this.addEventListener("onmouseover", event => {
+                var event = new Event("onMouseOver");               
+                console.log("inside onMouseOver");
                 this.checkErrorExists();
                 this.dispatchEvent(event);
             });
+
+            this.addEventListener("onmouseenter", event => {
+                var event = new Event("onMouseEnter");               
+                console.log("inside onMouseEnter");
+                this.checkErrorExists();
+                this.dispatchEvent(event);
+            });            
 
             this._props = {};
         }
@@ -70,6 +82,7 @@
         onCustomWidgetAfterUpdate(changedProperties) {
 
             console.log("onCustomWidgetAfterUpdate called");
+            console.log(`${this._props["widgetName"]}`);
 
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
