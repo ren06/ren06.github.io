@@ -21,13 +21,14 @@
             console.log("this.$selector=", this.$selector);
             if(this.$selector !== "" && this.$selector !== "undefined" && this.$selector !== null){
                 try{                  
-                    const errorMessage = document.querySelector(this.$selector);
+                    const errorMessageDiv = document.querySelector(this.$selector);
                     
-                    console.log("Current error message for " + this.$selector + ":", errorMessage);
+                    console.log("Current error message for " + this.$selector + ":", errorMessageDiv);
                     if(errorMessage){
                         console.log("Setting this.$errorExists to true");
                         
                         this.onCustomWidgetAfterUpdate({errorExists: true});
+                        this.onCustomWidgetAfterUpdate({errorMessage: errorMessageDiv.innerText});
                         
                     }
                 } catch(e){
@@ -49,21 +50,7 @@
                 console.log("inside onClick");
                 //this.checkErrorExists();
                 this.dispatchEvent(event);
-            });
-
-            // this.addEventListener("onmouseover", event => {
-            //     var event = new Event("onMouseOver");               
-            //     console.log("inside onMouseOver");
-            //     this.checkErrorExists();
-            //     this.dispatchEvent(event);
-            // });
-
-            // this.addEventListener("onmouseenter", event => {
-            //     var event = new Event("onMouseEnter");               
-            //     console.log("inside onMouseEnter");
-            //     this.checkErrorExists();
-            //     this.dispatchEvent(event);
-            // });            
+            });     
 
             this._props = {};
         }

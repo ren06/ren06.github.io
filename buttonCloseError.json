@@ -1,6 +1,6 @@
 {
     "id": "com.synvance.button.closeerror",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "name": "Button Close Error Widget",
     "description": "A button that checks HTML error when clicked",
     "newInstancePrefix": "ButtonCloseError",
@@ -32,7 +32,12 @@
             "type": "boolean",
             "description": "True if error, false if none",
             "default": false
-        }
+        },
+        "errorMessage": {
+            "type": "string",
+            "description": "Error message in selector",
+            "default": ""
+        }        
     },  
     "methods": { 
         "setTooltip": {
@@ -66,17 +71,16 @@
             "returnType": "boolean",     
             "description": "Return error status",           
             "body": "return this.errorExists;"
+        },
+        "getErrorMessage": {      
+            "returnType": "string",     
+            "description": "Return error message",           
+            "body": "return this.errorMessage;"
         }
     },
     "events": {
         "onClick": {
             "description": "Called when the user clicks the button."        
-        },
-        "onMouseOver":{
-            "description": "Mouse over"        
-        }, 
-        "onMouseEnter":{
-            "description": "Mouse enter"        
-        }         
+        }        
     }           
 }
