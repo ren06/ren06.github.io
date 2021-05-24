@@ -25,23 +25,10 @@
         }
     ],
     "properties": {
-        "imageUrl": {
-            "type": "string",
-            "description": "URL of the image",
-            "default": "https://aydenowl.github.io/literate-enigma/image_button/bookmark.png"
-        },
         "tooltip": {
             "type": "string",
             "description": "Button tooltip",
             "default": ""
-        },
-        "width": {
-            "type": "integer",
-            "default": 100
-        },
-        "height": {
-            "type": "integer",
-            "default": 100
         },
         "selector": {
             "type": "string",
@@ -55,17 +42,6 @@
         }
     },  
     "methods": { 
-        "setImageUrl": {
-            "description": "Sets the image URL.",
-            "parameters": [
-                {
-                    "name": "newUrl",
-                    "type": "string",
-                    "description": "Image's URL"
-                }
-            ],
-            "body": "this.imageUrl = newUrl;"
-        },
         "setTooltip": {
             "description": "Sets the tooltip's text.",
             "parameters": [
@@ -76,11 +52,6 @@
                 }
             ],
             "body": "this.tooltip = newText;"
-        },
-        "getImageUrl": {
-            "returnType": "string",
-            "description": "Returns the image's URL.",
-            "body": "return this.imageUrl;"
         },
         "getTooltip": {
             "returnType": "string",

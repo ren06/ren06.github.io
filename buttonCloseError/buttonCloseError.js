@@ -12,21 +12,11 @@
 			display: block;
 		} 
 
-        .container {
-            max-width: 400px;
-            overflow: hidden;
-        }
-
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
-
 		</style>
 		
-		<div class="container">
-            <img alt="Button image" title="Button image" src="https://aydenowl.github.io/literate-enigma/image_button/bookmark.png" />
-		</div>
+        <button style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
+            Close
+        </button>
 	`;
 
     class Imagebutton extends HTMLElement {
@@ -53,7 +43,7 @@
             shadowRoot.appendChild(template.content.cloneNode(true));
 
             this.$style = shadowRoot.querySelector('style');
-            this.$div = shadowRoot.querySelector('div');
+            this.$button = shadowRoot.querySelector('div');
 
             console.log(this.$selector, this.$errorExists);
 
@@ -64,7 +54,7 @@
                 this.checkErrorExists();
 
                 //hardcoded
-                const message = document.querySelector("#__icon218");
+                const message = document.querySelector("#__message0");
                 console.log("selector hardcoded", message);
 
                 this.dispatchEvent(event);
@@ -73,9 +63,10 @@
             this._props = {};
         }
 
-        render(imageUrl, tooltip) {
-            this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
-            this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
+        render(tooltip) {
+            //this.$style.innerHTML = ':host {display: block;} .container {max-width: 400px;overflow: hidden;} img {width: 100%;object-fit: contain;}';
+            //this.$div.innerHTML = '<img alt="Button image" title="' + tooltip + '" src="' + imageUrl + '" />';
+            this.$button.innerHTML = '<button title="' + tooltip + '" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">Close</button>';
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
@@ -83,10 +74,6 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
-            if ("imageUrl" in changedProperties) {
-                this.$imageUrl = changedProperties["imageUrl"];
-            }
-
             if ("tooltip" in changedProperties) {
                 this.$tooltip = changedProperties["tooltip"];
             }
@@ -102,7 +89,7 @@
                 this.$errorExists = changedProperties["errorExists"];
             }
 
-            this.render(this.$imageUrl, this.$tooltip);
+            this.render(this.$tooltip);
         }
     }
 
