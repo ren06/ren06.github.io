@@ -56,31 +56,10 @@
 			"default": 100
 		}
 	},
-	"methods": {
-		"setValue": {
-			"description": "Sets the Gauge value.",
-			"parameters": [
-				{
-					"name": "newValue",
-					"type": "number",
-					"description": "Gauge value"
-				},
-				{
-					"name": "newInfo",
-					"type": "string",
-					"description": "Gauge info"
-				},
-				{
-					"name": "newColor",
-					"type": "string",
-					"description": "Text Color info"
-				}
-			],
-			"body": "this.value = newValue; this.info = newInfo; this.color = newColor;"
-		},
+	"methods": {		
 		"getValue": {
-			"returnType": "number",
-			"description": "Returns the Gauge value.",
+			"returnType": "string",
+			"description": "Returns the Value.",
 			"body": "return this.value;"
 		}
 	},
