@@ -17,7 +17,7 @@
            
             this.$button = shadowRoot.querySelector('#basicButton');
             
-            this.addEventListener("click", e => {
+            this.addEventListener("click", (e) => {
                 
                 console.log("setting value inside click event listener");
                 this.onCustomWidgetAfterUpdate({value: "FOO"});
@@ -52,5 +52,5 @@
         }
     }
 
-    customElements.define("com-synvance-buttonbasic", BasicButton);
+    customElements.define("com-synvance-basic", BasicButton);
 })();
