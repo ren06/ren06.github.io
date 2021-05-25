@@ -31,6 +31,7 @@
         }
 
         render(tooltip) {
+            console.log("Render tooltip " + tooltip);
             this.$button.title = "'Value=" + tooltip +"'";
         }
 
@@ -45,7 +46,8 @@
 
             if ("value" in changedProperties) {
                 console.log("onCustomWidgetAfterUpdate: Value=" + changedProperties["value"]);
-                setTimeout(() => {this.$value = changedProperties["value"];}, 1000);
+                //setTimeout(() => {this.$value = changedProperties["value"];}, 1000);
+                this.$value = changedProperties["value"];
                 
             }
             
