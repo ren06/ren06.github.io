@@ -1,13 +1,7 @@
 (function () {
 
     let template = document.createElement("template");
-    template.innerHTML = `
-		<style>
-		:host {
-			display: block;
-		} 
-		</style>
-		
+    template.innerHTML = `				
         <button id="basicButton" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
             Button
         </button>
@@ -16,16 +10,16 @@
     class BasicButton extends HTMLElement {
 
         constructor() {
+            console.log("Executing BasicWidget constructor");
             super();
             let shadowRoot = this.attachShadow({ mode: "open" });
             shadowRoot.appendChild(template.content.cloneNode(true));
-
-            this.$style = shadowRoot.querySelector('style');
+           
             this.$button = shadowRoot.querySelector('#basicButton');
             
             this.addEventListener("click", e => {
                 
-                console.log("setting value inside click event listener")
+                console.log("setting value inside click event listener");
                 this.onCustomWidgetAfterUpdate({value: "FOO"});
                 var event = new Event("onClick");                               
                 console.log("dispatching event");
@@ -58,5 +52,5 @@
         }
     }
 
-    customElements.define("com-synvance-buttoncloseerror", BasicButton);
+    customElements.define("com-synvance-buttonbasic", BasicButton);
 })();
