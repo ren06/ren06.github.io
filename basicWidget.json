@@ -1,6 +1,6 @@
 {
     "id": "com.synvance.basicwidget",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "name": "Basic Widget",
     "description": "A basic Widget that sets a value",
     "newInstancePrefix": "BasicWidget",
