@@ -105,6 +105,7 @@
 
 		onCustomWidgetAfterUpdate(changedProperties) {
 			if ("value" in changedProperties) {
+                console.log("Value changed:",  changedProperties["value"]);
 				this.$value = changedProperties["value"];
 			}
 			
