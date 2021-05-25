@@ -25,6 +25,17 @@
         }         
     },  
     "methods": { 
+        "setValue": {           
+            "description": "Set value",
+            "parameters": [
+                {
+                    "name": "val",
+                    "type": "string",
+                    "description": "value"
+                }
+            ],
+            "body": "this.value = val;"
+        },
         "getValue": {
             "returnType": "string",
             "description": "Get the value",
