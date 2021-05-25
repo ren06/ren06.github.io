@@ -31,7 +31,7 @@
         }
 
         render(tooltip) {
-            this.$button.title = "'" + tooltip +"'";
+            this.$button.title = "Value='" + tooltip +"'";
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
