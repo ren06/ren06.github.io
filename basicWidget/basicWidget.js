@@ -45,7 +45,8 @@
 
             if ("value" in changedProperties) {
                 console.log("onCustomWidgetAfterUpdate: Value=" + changedProperties["value"]);
-                this.$value = changedProperties["value"];
+                setTimeout(() => {this.$value = changedProperties["value"];}, 1000);
+                
             }
             
             this.render(this.$value);
