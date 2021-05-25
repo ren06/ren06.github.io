@@ -66,6 +66,7 @@
 			this.$svg = shadowRoot.querySelector('svg');
 			
 			this.addEventListener("click", event => {
+                console.log("Clicked", "current Value:", this.$value );
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
 			});
