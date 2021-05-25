@@ -1,8 +1,8 @@
 {
-    "id": "com.synvance.basic",
-    "version": "0.1.1",
+    "id": "com.synvance.basicwidget",
+    "version": "0.1.2",
     "name": "Basic Widget",
-    "description": "A basic button that sets a value",
+    "description": "A basic Widget that sets a value",
     "newInstancePrefix": "BasicWidget",
     "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
     "vendor": "Synvance",
@@ -11,8 +11,8 @@
     "webcomponents": [
         {
             "kind": "main",
-            "tag": "com-synvance-basic",
-            "url": "https://ren06.github.io/basic/basic.js",
+            "tag": "com-synvance-basicwidget",
+            "url": "https://ren06.github.io/basicwidget/basicwidget.js",
             "integrity": "",
             "ignoreIntegrity": true
         }

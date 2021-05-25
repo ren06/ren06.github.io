@@ -7,7 +7,7 @@
         </button>
 	`;
 
-    class BasicButton extends HTMLElement {
+    class BasicWidget extends HTMLElement {
 
         constructor() {
             console.log("Executing BasicWidget constructor");
@@ -52,5 +52,5 @@
         }
     }
 
-    customElements.define("com-synvance-basic", BasicButton);
+    customElements.define("com-synvance-basicwidget", BasicWidget);
 })();
