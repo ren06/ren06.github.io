@@ -29,9 +29,9 @@
             this._props = {};
         }
 
-        render(tooltip) {
-            //To easily check the current value from the frontend
-            this.$button.title = "'Value=" + tooltip +"'";
+        render(value) {
+            //To easily check the current value inside the Widget from the frontend
+            this.$button.title = "'Value=" + value +"'";
         }
 
         onCustomWidgetBeforeUpdate(changedProperties) {
