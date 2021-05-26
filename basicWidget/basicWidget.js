@@ -3,7 +3,7 @@
     let template = document.createElement("template");
     template.innerHTML = `				
         <button id="basicButton" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
-            Set Widget Value to FOO
+            Set Widget Value to WIDGET
         </button>
 	`;
 
@@ -20,18 +20,18 @@
             this.addEventListener("click", (e) => {
                 
                 console.log("BasicWidget click event listener");
-                this.onCustomWidgetAfterUpdate({value:"FOO"});
-                var event = new Event("onClick");                               
-                //console.log("dispatching event");
-                this.dispatchEvent(event);
-                //console.log("end event");
+                //this.onCustomWidgetAfterUpdate({value:"WIDGET"});
+                this.$value = "WIDGET";      
+
+                var event = new Event("onClick");                                               
+                this.dispatchEvent(event);                
             });     
 
             this._props = {};
         }
 
         render(tooltip) {
-            console.log("Render tooltip " + tooltip);
+            //To easily check the current value from the frontend
             this.$button.title = "'Value=" + tooltip +"'";
         }
 
@@ -46,9 +46,7 @@
 
             if ("value" in changedProperties) {
                 console.log("onCustomWidgetAfterUpdate: Value=" + changedProperties["value"]);
-                //setTimeout(() => {this.$value = changedProperties["value"];}, 1000);
-                this.$value = changedProperties["value"];
-                
+                this.$value = changedProperties["value"];                
             }
             
             this.render(this.$value);
