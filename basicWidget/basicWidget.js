@@ -3,7 +3,7 @@
     let template = document.createElement("template");
     template.innerHTML = `				
         <button id="basicButton" style="width: 100%; height: 100%; overflow: visible; display: flex; align-items: flex-start;" type="button">
-            Set Widget Value to WIDGET
+            Set Widget Value=WIDGET
         </button>
 	`;
 
