@@ -4,7 +4,7 @@
     "name": "Basic Widget",
     "description": "A basic Widget that sets a value",
     "newInstancePrefix": "BasicWidget",
-    "icon" : "https://aydenowl.github.io/literate-enigma/icon.png",
+    "icon" : "https://ren06.github.io/box/icon.png",
     "vendor": "Synvance",
     "eula": "EULA",
     "license": "1.0",

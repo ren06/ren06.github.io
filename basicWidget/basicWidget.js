@@ -19,9 +19,8 @@
             
             this.addEventListener("click", (e) => {
                 
-                console.log("BasicWidget click event listener");
-                //this.onCustomWidgetAfterUpdate({value:"WIDGET"});
-                this.$value = "WIDGET";      
+                console.log("BasicWidget click event listener, setting Value=WIDGET");
+                this.onCustomWidgetAfterUpdate({value:"WIDGET"});
 
                 var event = new Event("onClick");                                               
                 this.dispatchEvent(event);                
@@ -41,8 +40,6 @@
         }
 
         onCustomWidgetAfterUpdate(changedProperties) {
-
-            //console.log("onCustomWidgetAfterUpdate called ");
 
             if ("value" in changedProperties) {
                 console.log("onCustomWidgetAfterUpdate: Value=" + changedProperties["value"]);
