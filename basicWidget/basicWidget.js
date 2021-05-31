@@ -22,8 +22,9 @@
                 console.log("BasicWidget click event listener, setting Value=WIDGET");
                 //this.onCustomWidgetAfterUpdate({value:"WIDGET"});
                 
-                console.log(Object.keys(this));
+                //console.log(Object.keys(this));
                 console.dir(this);
+                console.dir(this._props);
 
                 //this.$setValue("WIDGET");
                 this.setValue("WIDGET"); 
