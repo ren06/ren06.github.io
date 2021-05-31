@@ -20,8 +20,11 @@
             this.addEventListener("click", (e) => {
                 
                 console.log("BasicWidget click event listener, setting Value=WIDGET");
-                this.onCustomWidgetAfterUpdate({value:"WIDGET"});
-
+                //this.onCustomWidgetAfterUpdate({value:"WIDGET"});
+                
+                this.$setValue("WIDGET");
+                this.setValue("WIDGET");
+                
                 var event = new Event("onClick");                                               
                 this.dispatchEvent(event);                
             });     
