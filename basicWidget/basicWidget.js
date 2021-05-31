@@ -27,7 +27,7 @@
                 console.dir(this._props);
 
                 //this.$setValue("WIDGET");
-                this.setValue("WIDGET"); 
+                //this.setValue("WIDGET"); 
                 
                 var event = new Event("onClick");                                               
                 this.dispatchEvent(event);                
