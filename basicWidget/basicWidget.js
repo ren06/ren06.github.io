@@ -23,9 +23,9 @@
                 //this.onCustomWidgetAfterUpdate({value:"WIDGET"});
                 
                 console.log(this);
-                
+
                 //this.$setValue("WIDGET");
-                this.setValue("WIDGET");
+                this.setValue("WIDGET"); 
                 
                 var event = new Event("onClick");                                               
                 this.dispatchEvent(event);                
